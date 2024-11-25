@@ -1,5 +1,5 @@
 function checkVowels() {
-    var text = document.getElementById('inputText').value
+    var text = document.getElementById('inputText').value;
     var vowelCount = 0;
     // convert it into lowercase
 
@@ -9,9 +9,12 @@ function checkVowels() {
 
         var char = text.charAt(i)
         if(isVowel(char)){
-            
+            vowelCount++;
         }
     }
+
+    var result = document.getElementById('result');
+    result.textContent = "Total Vowels: " + vowelCount;
 }
 
 function isVowel(char) {
